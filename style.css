@@ -1,7 +1,178 @@
+
 :root {
+    /* colors from: https://designshack.net/articles/trends/best-website-color-schemes/ */
     --orange: #E56B1F;
     --purple: #32064A;
     --yellow: #FCD02C;
     --pink: #E42C6A;
+    --text: rgb(85, 85, 85);
+    --banner-text: #DDDDDD;
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    word-spacing: .2em;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.heading-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* navigation */
+
+nav {
+    float: right;
+    margin-right: 7.5vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    padding: 0 0.5em;
+}
+
+nav a:link {
+    text-decoration-line: none;
+}
+
+nav a:hover {
+    text-decoration-line: underline;
+}
+
+
+
+
+/* all HTML */
+
+.content {
+    width: 80vw;
+    margin: auto;
+}
+
+
+
+
+/* banner section */
+
+.banner {
+    padding: 3em 0;
+    color: var(--banner-text);
+    background-image: linear-gradient(to right bottom, #32064a 50%, #6f0052, #a5074d);
+    /* background-image: linear-gradient(to right bottom, #cecece, #cebcd3, #dea5c7, #f18ba8, #f97577, #eb6163, #dd4d4f, #ce383c, #b1144a, #8b0051, #600052, #32064a); */
+}
+
+.banner p {
+    margin-bottom: 3em;
+}
+
+.banner .content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .input-group input[type=text] {
+    margin-right: 1em;
+    flex: 2.5 0 auto;
+}
+
+.banner h1{
+    margin: 2rem 0 0 0;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+/* non-banner sections */
+
+section:not(.banner) {
+    padding: 3.5rem 0;
+}
+
+section:not(.banner) > div {
+    display: flex;
+}
+
+
+section:not(.banner) img {
+    margin-right: 4rem;
+    width: 5%;
+    height: 5%;
+}
+
+section:nth-child(n+2):nth-child(-n+3) {
+    border-bottom: 4px dashed var(--banner-text);
+}
+
+/* content groupings in non-banner section */
+.content-group h2 {
+    margin-top: 0;
+    color: var(--purple);
+}
+
+
+
+
+/* input groupings for flexbox */
+
+.input-group {
+    display: flex;
+    width: 75vw;
+    height: 2.5em;
+}
+
+
+.input-group input[type=submit] {
+    all: unset;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    height: 100%;
+    background-image: linear-gradient(to right, #e56b1f, #eb5a33, #ec4946, #ea3958, #e42c6a);
+    border-radius: .2em;
+    flex: 1 0 auto;
+    box-shadow: .2px .2px var(--purple), -.5px -.5px 5px var(--purple);
+}
+
+
+
+
+/* footer section */
+
+footer p {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to left, #32064a 50%, #6f0052, #a5074d);
+    height: 5rem;
+}
