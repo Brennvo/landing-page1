@@ -176,3 +176,21 @@ footer p {
     background-image: linear-gradient(to left, #32064a 50%, #6f0052, #a5074d);
     height: 5rem;
 }
+
+@media all and (max-width: 820px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    section:not(.banner) img {
+        display: none;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        margin-right: 0;
+        background-color: var(--purple);
+        width: 100vw;
+    }
+}
