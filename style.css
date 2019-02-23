@@ -1,7 +1,71 @@
 :root {
+    /* colors from: https://designshack.net/articles/trends/best-website-color-schemes/ */
     --orange: #E56B1F;
     --purple: #32064A;
     --yellow: #FCD02C;
     --pink: #E42C6A;
 }
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 0 0.5em;
+}
+
+
+.section1 {
+    background-color: var(--purple);
+}
+
+.wrapper .content {
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.wrapper .section1 .content h1{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper .section1 .content > * {
+    color: white;
+    text-align: center;
+}
+
+
+main.wrapper section.section2 > div {
+    display: flex;
+}
+
+main.wrapper section.section2 > div:nth-child(-n+2) {
+    border-bottom: 2px dashed grey;
+}
+
+
+.wrapper .section2 div img {
+    width: 5%;
+    height: 5%;
+    margin-right: 20px;
+}
+
+
 
