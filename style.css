@@ -17,30 +17,68 @@ body {
     margin: 0;
 }
 
+nav {
+
+    float: right;
+    margin-right: 7.5vw;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-nav ul li {
+nav ul li a {
+    color: white;
     padding: 0 0.5em;
 }
 
+.wrapper section {
+    padding: 3em 0;
+}
 
 .section1 {
     background-color: var(--purple);
 }
 
-.wrapper .content {
+.content {
     width: 85vw;
     margin: auto;
+}
+
+
+.wrapper .section1 .content {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
+.wrapper .section1 .content > * {
+    border: 1px solid red;
+}
+
+.input-group {
+    display: flex;
+    width: 75vw;
+    height: 2em;
+}
+
+.input-group input[type=text] {
+    margin-right: 1em;
+    flex: 2 0 auto;
+}
+
+.input-group input[type=submit] {
+    all: unset;
+    height: 100%;
+    background-color: var(--orange);
+    border-radius: .2em;
+    flex: 1 0 auto;
+}
+
 .wrapper .section1 .content h1{
+    margin: 0;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
@@ -52,20 +90,27 @@ nav ul li {
 }
 
 
-main.wrapper section.section2 > div {
+main.wrapper section:nth-child(n+2) > div {
     display: flex;
 }
 
-main.wrapper section.section2 > div:nth-child(-n+2) {
+main.wrapper section:nth-child(n+2) div img {
+    width: 5%;
+    height: 5%;
+}
+
+main.wrapper section:nth-child(n+2):nth-child(-n+3) {
     border-bottom: 2px dashed grey;
 }
 
 
-.wrapper .section2 div img {
-    width: 5%;
-    height: 5%;
-    margin-right: 20px;
+footer p {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0;
+    color: white;
+    text-align: center;
+    background-color: var(--purple);
+    height: 5rem;
 }
-
-
-
