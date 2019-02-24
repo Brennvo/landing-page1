@@ -45,7 +45,7 @@ nav {
 }
 
 nav ul {
-    margin-right: 7.5vw;
+    margin-right: 0.5rem;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -157,7 +157,7 @@ section:not(.banner) img {
     height: 5%;
 }
 
-section:nth-child(n+2):nth-child(-n+3) {
+section:nth-of-type(n+2):nth-of-type(-n+3) {
     border-bottom: 4px dashed var(--banner-text);
 }
 
