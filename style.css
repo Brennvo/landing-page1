@@ -39,12 +39,13 @@ body {
 /* navigation */
 
 nav {
-    float: right;
+    margin-top: 0;
+    display: block;
     text-align: right;
-    width: 80%;
 }
 
 nav ul {
+    margin-top: 0;
     margin-right: 0.5rem;
     list-style: none;
     display: flex;
@@ -93,7 +94,7 @@ nav > *:nth-child(-n + 2) {
 .wrapper {
     max-width: 1150px;
     margin: 0 auto;
-    box-shadow: 20px 20px 15px rgb(27, 1, 41), -20px -20px 15px rgb(27, 1, 41);
+    box-shadow: 20px 0px 15px rgb(27, 1, 41), -20px 0px 15px rgb(27, 1, 41);
 }
 
 
@@ -208,6 +209,14 @@ footer p {
 }
 
 @media all and (max-width: 820px) {
+    .banner {
+        padding-top: 0.5rem;
+    }
+
+    img {
+        display: none;
+    }
+    
     .banner h1 {
         font-size: 3rem;
     }
