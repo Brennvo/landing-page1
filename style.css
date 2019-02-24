@@ -94,7 +94,7 @@ nav > *:nth-child(-n + 2) {
 .wrapper {
     max-width: 1150px;
     margin: 0 auto;
-    box-shadow: 20px 20px 15px rgb(27, 1, 41), -20px -20px 15px rgb(27, 1, 41);
+    box-shadow: 20px 0px 15px rgb(27, 1, 41), -20px 0px 15px rgb(27, 1, 41);
 }
 
 
