@@ -45,7 +45,7 @@ nav {
 }
 
 nav ul {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-right: 0.5rem;
     list-style: none;
     display: flex;
@@ -225,6 +225,7 @@ footer p {
     nav > label:nth-child(1) {
         display: block;
         cursor: pointer;
+        margin-top: auto;
     }
 
     /* adjust the unordered list so that it is positioned correctly on mobile view */
@@ -256,7 +257,7 @@ footer p {
         margin-right: 0;
         background-color: var(--purple);
         width: 100vw;
-        height: 7vh;
+        
     }
     
     #toggle:checked + ul {
