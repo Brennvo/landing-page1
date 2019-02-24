@@ -22,6 +22,7 @@ body {
     line-height: 1.5;
     word-spacing: .2em;
     color: var(--text);
+    background-color: var(--purple);
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
 }
@@ -40,6 +41,7 @@ body {
 nav {
     float: right;
     text-align: right;
+    width: 80%;
 }
 
 nav ul {
@@ -83,10 +85,16 @@ nav > *:nth-child(-n + 2) {
 /* all HTML */
 
 .content {
-    width: 80vw;
-    margin: auto;
+    width: 80%;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 15px rgb(27, 1, 41), -20px -20px 15px rgb(27, 1, 41);
+}
 
 
 
@@ -105,9 +113,11 @@ nav > *:nth-child(-n + 2) {
 
 .banner .content {
     display: flex;
+    justify-content: flex-start;
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+    
 }
 
 .banner .input-group input[type=text] {
@@ -133,6 +143,7 @@ nav > *:nth-child(-n + 2) {
 
 section:not(.banner) {
     padding: 3.5rem 0;
+    background-color: white;
 }
 
 section:not(.banner) > div {
@@ -163,8 +174,8 @@ section:nth-child(n+2):nth-child(-n+3) {
 
 .input-group {
     display: flex;
-    width: 75vw;
     height: 2.5em;
+    width: 100%;
 }
 
 
@@ -201,11 +212,13 @@ footer p {
         font-size: 3rem;
     }
 
+    /* show the hamburger menu text */
     nav > label:nth-child(1) {
         display: block;
         cursor: pointer;
     }
 
+    /* adjust the unordered list so that it is positioned correctly on mobile view */
     nav ul {
         display: none;
         flex-direction: row;
