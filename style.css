@@ -45,7 +45,7 @@ nav {
 }
 
 nav ul {
-    margin-top: 1rem;
+    margin-top: 0;
     margin-right: 0.5rem;
     list-style: none;
     display: flex;
