@@ -22,6 +22,7 @@ body {
     line-height: 1.5;
     word-spacing: .2em;
     color: var(--text);
+    background-color: var(--purple);
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
 }
@@ -39,27 +40,44 @@ body {
 
 nav {
     float: right;
-    margin-right: 7.5vw;
+    text-align: right;
+    width: 80%;
 }
 
 nav ul {
+    margin-right: 7.5vw;
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-nav a {
+nav ul a {
     color: white;
     padding: 0 0.5em;
 }
 
-nav a:link {
+nav ul a:link {
     text-decoration-line: none;
 }
 
-nav a:hover {
+nav ul a:hover {
     text-decoration-line: underline;
 }
+
+nav > label {
+    color: white;
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+nav > *:nth-child(-n + 2) {
+    display: none;
+}
+
+
+/* nav li:last-child {
+    display:none; 
+} */
 
 
 
@@ -67,10 +85,16 @@ nav a:hover {
 /* all HTML */
 
 .content {
-    width: 80vw;
-    margin: auto;
+    width: 80%;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
+.wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 15px rgb(27, 1, 41), -20px -20px 15px rgb(27, 1, 41);
+}
 
 
 
@@ -89,9 +113,11 @@ nav a:hover {
 
 .banner .content {
     display: flex;
+    justify-content: flex-start;
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+    
 }
 
 .banner .input-group input[type=text] {
@@ -117,6 +143,7 @@ nav a:hover {
 
 section:not(.banner) {
     padding: 3.5rem 0;
+    background-color: white;
 }
 
 section:not(.banner) > div {
@@ -147,8 +174,8 @@ section:nth-child(n+2):nth-child(-n+3) {
 
 .input-group {
     display: flex;
-    width: 75vw;
     height: 2.5em;
+    width: 100%;
 }
 
 
@@ -185,15 +212,45 @@ footer p {
         font-size: 3rem;
     }
 
-    section:not(.banner) img {
+    /* show the hamburger menu text */
+    nav > label:nth-child(1) {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* adjust the unordered list so that it is positioned correctly on mobile view */
+    nav ul {
         display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+        background-color: var(--purple);
+        /* overwrite default ul padding */
+        padding: 0;
+        transition: all 1s ease;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+        border-bottom: 1px solid var(--orange);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     nav {
         position: sticky;
+        position: -webkit-sticky;
         top: 0;
         margin-right: 0;
         background-color: var(--purple);
         width: 100vw;
+        height: 7vh;
+    }
+    
+    #toggle:checked + ul {
+        display: flex;
     }
 }
