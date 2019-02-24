@@ -39,27 +39,43 @@ body {
 
 nav {
     float: right;
-    margin-right: 7.5vw;
+    text-align: right;
 }
 
 nav ul {
+    margin-right: 7.5vw;
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-nav a {
+nav ul a {
     color: white;
     padding: 0 0.5em;
 }
 
-nav a:link {
+nav ul a:link {
     text-decoration-line: none;
 }
 
-nav a:hover {
+nav ul a:hover {
     text-decoration-line: underline;
 }
+
+nav > label {
+    color: white;
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+nav > *:nth-child(-n + 2) {
+    display: none;
+}
+
+
+/* nav li:last-child {
+    display:none; 
+} */
 
 
 
@@ -185,15 +201,43 @@ footer p {
         font-size: 3rem;
     }
 
-    section:not(.banner) img {
+    nav > label:nth-child(1) {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul {
         display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+        background-color: var(--purple);
+        /* overwrite default ul padding */
+        padding: 0;
+        transition: all 1s ease;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+        border-bottom: 1px solid var(--orange);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     nav {
         position: sticky;
+        position: -webkit-sticky;
         top: 0;
         margin-right: 0;
         background-color: var(--purple);
         width: 100vw;
+        height: 7vh;
+    }
+    
+    #toggle:checked + ul {
+        display: flex;
     }
 }
